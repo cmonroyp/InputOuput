@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="row">
+        <div class="card col-8" style="margin: 0 auto;float: none">
+            <div class="card-body" style="background-color: #03c3125e;">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title text-center">Componente Padre</h4>
+
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Enviar saludo al Hijo</label>
+                            <input type="text" class="form-control" placeholder="Ingrese un texto" [(ngModel)]="saludo_padre" name="saludo_padre">
+                        </div>
+
+                        <div style="padding-top: 20px"><small id="passwordHelpInline" class="text-muted">
+                            Resultado Sumatoria Hijo Padre :
+                          </small>
+                            <h6 *ngIf="sumatoriaHijo">{{sumatoriaHijo}}</h6>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-body" style="background-color: #c3031575;">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title text-center">Componente Hijo</h4>
+                        <app-hijo [recibeSaludoPadre]="saludo_padre" (sumaNumeros)="updateFromChild($event)"></app-hijo>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

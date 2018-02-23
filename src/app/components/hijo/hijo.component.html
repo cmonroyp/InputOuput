@@ -1,0 +1,22 @@
+<div>
+    <form>
+        <div class="form-row">
+            <div class="col">
+                <label for="exampleInputEmail1">Numero1</label>
+                <input type="number" class="form-control" placeholder="Ingrese un numero" [(ngModel)]="numero1" name="numero1">
+            </div>
+            <div class="col">
+                <label for="exampleInputPassword1">Numero2</label>
+                <input type="number" class="form-control" placeholder="Ingrese un numero" [(ngModel)]="numero2" name="numero2">
+            </div>
+        </div>
+    </form>
+    <div style="padding-top: 10px">
+        <button type="button" class="btn btn-primary" (click)="onsubmit()">Enviar</button>
+    </div>
+
+    <p style="padding-top: 20px"><small id="passwordHelpInline" class="text-muted">
+       Saludo Padre a Hijo
+      </small>: {{recibeSaludoPadre}}
+    </p>
+</div>
